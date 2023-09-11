@@ -1,4 +1,5 @@
 #include <unistd.h>
+
 /**
  * main - Entry point
  *
@@ -6,11 +7,12 @@
  */
 int main(void)
 {
-    char digit = '0';
+    int digit = 0;
 
-    while (digit <= '9')
+    while (digit < 10)
     {
-        write(1, &digit, 1);
+        char c = digit + '0';
+        write(1, &c, 1);
         digit++;
     }
 
