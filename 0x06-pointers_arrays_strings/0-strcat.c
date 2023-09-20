@@ -7,24 +7,19 @@
  *
  * Return: A pointer to the resulting string `dest`.
  */
+
 char *_strcat(char *dest, char *src)
 {
-    char *ptr = dest;
+    int c, c2;
 
-    while (*ptr)
-    {
-        ptr++;
-    }
+    c = 0;
 
-    while (*src)
-    {
-        *ptr = *src;
-        ptr++;
-        src++;
-    }
+    /*find the size of dest array*/
+    while (dest[c])
+	    c++
+    /*Iterate through each character in src array until the null byte*/
+    for (c2 = 0; src[c2] ; c2++)
+	    /*append arcc21 to destiel while overwritting the mill byte in dest*/
+        dest[c] = src[c2];
 
-    *ptr = '\0';
-
-    return dest;
-}
-
+    return (dest);
